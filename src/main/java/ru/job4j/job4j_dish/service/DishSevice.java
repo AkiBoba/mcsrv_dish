@@ -32,6 +32,6 @@ public class DishSevice {
     }
 
     public Dish getById(int id) {
-        return repository.findById(id).orElseGet(null);
+        return repository.findById(id).orElse(null);
     }
 }
