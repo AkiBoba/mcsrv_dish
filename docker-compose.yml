@@ -13,7 +13,7 @@ services:
     restart: always
   job4j_dish:
     build:
-      context: src/test/java/ru/job4j/job4j_dish
+      context: src/main/java/ru/job4j/job4j_dish
       dockerfile: Dockerfile
     environment:
       - spring.datasource.url=jdbc:postgresql://db:5432/dish
