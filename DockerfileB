@@ -6,4 +6,6 @@ WORKDIR job4j_dish
 
 COPY . .
 
-CMD ["mvn", "liquibase:update", "-Pdocker"]
+RUN mvn package -Dmaven.test.skip
+
+CMD ["java", "-jar", "target/job4j_dish.jar"]
