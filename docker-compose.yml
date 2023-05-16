@@ -16,12 +16,10 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - JDBC_URL=jdbc:postgresql://db:5432/dish
-      - JDBC_USERNAME=postgres
-      - JDBC_PASSWORD=password
-      - JDBC_DRIVER=org.postgresql.Driver
-    ports:
-      - "127.0.0.1:80:8080"
+      - spring.datasource.url=jdbc:postgresql://db:5432/job4j_dish
+      - spring.datasource.username=postgres
+      - spring.datasource.password=password
+      - spring.datasource.driver-class-name=org.postgresql.Driver
     container_name: job4j_dish
     depends_on:
       - db
