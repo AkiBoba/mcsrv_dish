@@ -29,7 +29,7 @@
         <profile>
             <id>production</id>
             <properties>
-                <liquibase.changeLogFile>db/dbchangelog.xml</liquibase.changeLogFile>
+                <liquibase.changeLogFile>db/db.changelog.xml</liquibase.changeLogFile>
                 <liquibase.url>jdbc:postgresql://127.0.0.1:5432/dish</liquibase.url>
                 <liquibase.username>postgres</liquibase.username>
                 <liquibase.password>password</liquibase.password>
@@ -38,7 +38,7 @@
         <profile>
             <id>docker</id>
             <properties>
-                <liquibase.changeLogFile>db/dbchangelog.xml</liquibase.changeLogFile>
+                <liquibase.changeLogFile>db/db.changelog.xml</liquibase.changeLogFile>
                 <liquibase.url>${docker_db_url_jdbc}</liquibase.url>
                 <liquibase.username>postgres</liquibase.username>
                 <liquibase.password>password</liquibase.password>
