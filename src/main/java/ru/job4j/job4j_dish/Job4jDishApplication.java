@@ -1,5 +1,6 @@
 package ru.job4j.job4j_dish;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +13,7 @@ import java.util.Properties;
 
 import static java.lang.System.*;
 
+@Slf4j
 @SpringBootApplication
 public class Job4jDishApplication {
     private static String loadSysEnvIfNullThenConfig(String sysEnv, String key, Properties config) {
@@ -25,7 +27,7 @@ public class Job4jDishApplication {
     private static Connection loadConnection() throws ClassNotFoundException, SQLException {
         var config = new Properties();
         try (InputStream in = Job4jDishApplication.class.getClassLoader()
-                .getResourceAsStream("app.properties")) {
+                .getResourceAsStream("application.properties")) {
             config.load(in);
         } catch (IOException e) {
             throw new IllegalStateException(e);
