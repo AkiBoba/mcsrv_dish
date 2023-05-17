@@ -33,7 +33,7 @@ services:
       - spring.datasource.password=password
       - spring.datasource.driver-class-name=org.postgresql.Driver
     ports:
-      - "127.0.0.1:80:8081"
+      - "127.0.0.1:80:8080"
     container_name: job4j_dish
     depends_on:
       - db
