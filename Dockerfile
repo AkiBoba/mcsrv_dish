@@ -8,6 +8,4 @@ COPY . .
 
 RUN mvn package -Dmaven.test.skip
 
-CMD ["mvn", "liquibase:update", "-Pdocker"]
-
 CMD ["java", "-jar", "target/job4j_dish-0.0.1-SNAPSHOT.jar"]
