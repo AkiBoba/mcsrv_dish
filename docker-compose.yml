@@ -23,7 +23,7 @@ services:
     container_name: lb
     depends_on:
       - db
-  job4j_tracker:
+  job4j_dish:
     build:
       context: .
       dockerfile: Dockerfile
@@ -32,6 +32,8 @@ services:
       - spring.datasource.username=postgres
       - spring.datasource.password=password
       - spring.datasource.driver-class-name=org.postgresql.Driver
+    ports:
+      - "127.0.0.1:80:8081"
     container_name: job4j_dish
     depends_on:
       - db
