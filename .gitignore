@@ -1,33 +1,28 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-### IntelliJ IDEA ###
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+### Example user template template
+### Example user template
+
+# IntelliJ project files
 .idea
-*.iws
 *.iml
-*.ipr
+out
+gen
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
+#
+target/
+lucene/
+*.psd
+logs/
