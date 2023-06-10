@@ -3,6 +3,7 @@ package ru.job4j.job4j_dish;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.kafka.annotation.EnableKafka;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +16,7 @@ import static java.lang.System.*;
 
 @Slf4j
 @SpringBootApplication
+@EnableKafka
 public class Job4jDishApplication {
     private static String loadSysEnvIfNullThenConfig(String sysEnv, String key, Properties config) {
         String value = System.getenv(sysEnv);
